@@ -18,27 +18,26 @@ body, html {
 .login-container {
     display: flex;
     flex-direction: row;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    width: 100vw;
+    height: 100vh;
     background-color: white;
     overflow: hidden;
 }
 
-/* Flex proportions for left and right sections */
 .login-left {
-    flex: 1; /* Allow left side to take up 50% */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px;
     background-color: #ffffff;
-    max-width: 600px; /* Limit width for better balance */
+    max-width: 600px;
     width: 100%;
 }
 
 .login-right {
-    flex: 1; /* Allow right side to take up 50% */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,27 +91,13 @@ body, html {
     background-color: #fff;
     border: 1px solid #ddd;
     color: black;
-    padding: 12px 121px; /* Default padding for larger screens */
+    padding: 12px 121px;
     border-radius: 5px;
     font-size: 16px;
     margin-bottom: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
-@media (max-width: 1024px) {
-    .google-login {
-        padding: 12px 40px; /* Adjust padding for medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .google-login {
-        padding: 10px 90px; /* Smaller padding for mobile screens */
-        font-size: 14px; /* Slightly reduce font size on small screens */
-    }
-}
-
 
 .google-login:hover {
     background-color: #f0f0f0;
@@ -135,7 +120,7 @@ body, html {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 400px; /* Limit form width */
+    max-width: 400px;
 }
 
 .login-form label {
@@ -169,10 +154,9 @@ body, html {
     padding: 12px;
     border: none;
     cursor: pointer;
-    font-size: medium;
+    font-size: 1rem;
     border-radius: 50px;
     transition: background-color 0.3s ease;
-    font-size: 1rem;
 }
 
 .login-btn:hover {
@@ -194,7 +178,6 @@ body, html {
     text-decoration: underline;
 }
 
-/* Header Buttons in Top-Right Corner */
 .header-buttons {
     position: absolute;
     top: 20px;
@@ -231,7 +214,6 @@ body, html {
     color: black;
 }
 
-/* Carousel */
 .image-overlay {
     position: absolute;
     top: 0;
@@ -260,7 +242,6 @@ body, html {
     object-fit: cover;
 }
 
-/* Carousel Navigation */
 .carousel-nav {
     position: absolute;
     bottom: 20px;
@@ -287,11 +268,9 @@ button.prev:hover, button.next:hover {
     transform: scale(1.1);
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .login-container {
         flex-direction: column;
-        height: 100vh;
     }
 
     .login-right {
