@@ -26,12 +26,15 @@ body, html {
 }
 
 .login-left {
+    position: relative;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding-top: 4rem; /* Space for header */
+    padding-left: 2rem;
+    padding-right: 2rem;
     background-color: #ffffff;
     width: 50%;
     min-width: 300px;
@@ -51,12 +54,15 @@ body, html {
 }
 
 .header {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    right: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    max-width: 500px;
-    margin-bottom: 1rem;
+    max-width: calc(100% - 4rem); /* Responsive width */
+    z-index: 10;
 }
 
 .logo {
@@ -67,6 +73,7 @@ body, html {
 .language-select {
     display: flex;
     align-items: center;
+    font-size: 1rem; /* Adjust font size for better fit */
 }
 
 .language-select img {
@@ -277,7 +284,15 @@ button.prev:hover, button.next:hover {
     .login-left {
         width: 100%;
         padding: 1rem;
+        padding-top: 4rem;
         max-width: 100vw;
+    }
+
+    .header {
+        top: 1rem;
+        left: 1rem;
+        right: 1rem;
+        max-width: calc(100% - 2rem);
     }
 }
 
@@ -285,6 +300,14 @@ button.prev:hover, button.next:hover {
     .header-buttons .btn {
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
+    }
+
+    .language-select {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 1.75rem;
     }
 
     .welcome-text {
@@ -310,12 +333,23 @@ button.prev:hover, button.next:hover {
 }
 
 @media (max-width: 480px) {
+    .header {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        max-width: 100%;
+    }
+
     .logo {
         font-size: 1.5rem;
     }
 
-    .header {
-        width: 100%;
+    .language-select {
+        font-size: 0.85rem; /* Reduced font size for smaller devices */
+    }
+
+    .language-select img {
+        width: 20px; /* Reduced flag icon size */
+        height: 20px;
     }
 
     .google-login {
@@ -335,6 +369,7 @@ button.prev:hover, button.next:hover {
         font-size: 0.9rem;
     }
 }
+
 .header-buttons .btn-1 {
     padding: 10px 25px;
     background-color: transparent;
